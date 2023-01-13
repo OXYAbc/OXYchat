@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/colors.scss";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Blinker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+// @import '@angular/cdk/overlay-prebuilt.css';
+
+//spacing
+$spacer: 10em;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Blinker', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
