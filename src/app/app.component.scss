@@ -1,0 +1,156 @@
+@import "../assets/colors";
+
+$primary: #fff;
+
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    background: #2c2447;
+    --bd-pink-rgb: 214, 51, 132;
+    --bs-body-bg-rgb: 33, 37, 41;
+    --bs-primary-rgb: 13, 110, 253;
+    --bd-accent-rgb: 255, 228, 132;
+    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+    background-image: linear-gradient(
+        180deg,
+        rgba(var(--bs-body-bg-rgb), 0.01),
+        rgba(var(--bs-body-bg-rgb), 1) 85%
+        ),
+        radial-gradient(
+            ellipse at top left,
+            rgba(var(--bs-primary-rgb), 0.5),
+            transparent 50%
+            ),
+            radial-gradient(
+                ellipse at top right,
+                rgba(var(--bd-accent-rgb), 0.5),
+                transparent 50%
+                ),
+                radial-gradient(
+                    ellipse at center right,
+                    rgba(var(--bd-violet-rgb), 0.5),
+                    transparent 50%
+                    ),
+                    radial-gradient(
+                        ellipse at center left,
+                        rgba(var(--bd-pink-rgb), 0.5),
+                        transparent 50%
+                        );
+                        // background: linear-gradient(180deg, rgba(44,36,71,1) 0%, rgba(27,31,36,1) 100%)
+                        color: $text-light-color;
+                        
+                        ::-webkit-scrollbar {
+                            width: 12px;
+                        }
+                        
+                        ::-webkit-scrollbar-track {
+                            border: 1px solid #444;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+      background: #2c2447;
+      border: 1px solid #444;
+      border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: #342f44;
+    }
+    
+    .container {
+        height: 100%;
+    }
+    .header {
+        width: 100%;
+        .title {
+            font-size: 2em;
+            font-family: "Comfortaa", cursive;
+            font-weight: 600;
+        }
+    }
+    
+  .conversation {
+    width: 100%;
+    height: 50vh;
+    overflow-y: auto;
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      width: fit-content;
+      margin-right: 0;
+      margin: 1em 0;
+      width: 100%;
+    }
+    .message {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      padding: 1em;
+      border-radius: 12px;
+      border: 1px solid $bg-light;
+      color: #afafaf;
+      word-break: break-all;
+      max-width: 80%;
+    }
+    i {
+      margin: 0.4em;
+      padding: 0.4em;
+      border: 1px solid $bg-light;
+      border-radius: 12px;
+      width: auto;
+      height: fit-content;
+    }
+    .request {
+      justify-content: flex-end;
+    }
+
+    .response {
+      .type:after {
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: bottom;
+        -webkit-animation: ellipsis steps(4, end) 900ms infinite;
+        animation: ellipsis steps(4, end) 900ms infinite;
+        content: "\2026";
+        width: 0px;
+      }
+
+      @keyframes ellipsis {
+        to {
+          width: 16px;
+        }
+      }
+
+      @-webkit-keyframes ellipsis {
+        to {
+          width: 16px;
+        }
+      }
+    }
+
+  }
+  .form-control {
+    color: #afafaf;
+    background-color: #342f44;
+    border: none;
+  }
+
+  .form-control:focus {
+    border: none;
+    box-shadow: 0 0 0 0.2rem rgb(255 255 255 / 25%);
+  }
+  .credits{
+    width: 100%;
+    
+  }
+}
+@media (max-width: 767px) {
+    .conversation{
+        height: 80vh!important;
+    }
+    
+}
